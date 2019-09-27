@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://webservices.river.com"
+           xmlns:tns="http://webservices.river.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="account" type="tns:Account"/>
+    <xs:complexType name="Account">
+        <xs:sequence>
+            <xs:element name="AccountId" type="xs:int"/>
+            <xs:element name="AccountName" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
