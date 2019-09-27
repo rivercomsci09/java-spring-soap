@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://com/river/webservices/accountservice"
+            xmlns:account="http://webservices.river.com"
+            targetNamespace="http://com/river/webservices/accountservice"
+            elementFormDefault="qualified">
+
+    <xsd:import namespace="http://webservices.river.com" schemaLocation="AccountDetails.xsd"/>
+
+    <xsd:element name="getAccountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Account" type="account:Account"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getAllAccountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="account" type="account:Account" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="addAccountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="account" type="account:Account"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="updateAccountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="account" type="account:Account"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="deleteAccountResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="serviceStatus" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
